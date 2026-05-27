@@ -1,0 +1,86 @@
+/* Estilos propios encima de Bootstrap */
+
+:root {
+  --primary-custom: #123c69;
+  --secondary-custom: #1f7a8c;
+  --soft-bg: #f3f6fb;
+}
+
+body {
+  background: var(--soft-bg);
+}
+
+.bg-primary-custom {
+  background: var(--primary-custom);
+}
+
+.text-primary-custom {
+  color: var(--primary-custom);
+}
+
+.btn-primary-custom {
+  background: var(--secondary-custom);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  background: #155f6d;
+  color: #fff;
+}
+
+.hero-section {
+  background:
+    linear-gradient(135deg, rgba(18, 60, 105, 0.96), rgba(31, 122, 140, 0.92)),
+    radial-gradient(circle at top right, rgba(255,255,255,0.2), transparent 35%);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary-custom), var(--secondary-custom));
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.step-number {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--primary-custom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.option-box {
+  background: #f7f9fc;
+  border: 1px solid #e0e7ef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  height: 100%;
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.navbar-brand {
+  letter-spacing: -0.3px;
+}

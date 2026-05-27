@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiero comprar o alquilar | Solicitudes Inmobiliarias</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Solicitudes Inmobiliarias</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="comprador.html">Quiero comprar/alquilar</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertante.html">Ofrezco propiedades</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header text-white">
+    <div class="container py-5">
+      <h1 class="fw-bold">Cuéntanos qué inmueble necesitas</h1>
+      <p class="lead mb-0">Llena este formulario y enviaremos tu solicitud por WhatsApp para ayudarte a encontrar opciones.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0 rounded-4">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="h4 fw-bold text-primary-custom mb-2">Formulario para comprar o alquilar</h2>
+            <p class="text-muted mb-4">Los campos marcados con * son obligatorios.</p>
+
+            <form id="formComprador" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">¿Qué quieres hacer? *</label>
+                  <select class="form-select" name="operacion" required>
+                    <option value="">Seleccionar</option>
+                    <option>Comprar</option>
+                    <option>Alquilar</option>
+                    <option>Anticrético</option>
+                    <option>Solo cotizar</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona una operación.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Tipo de inmueble *</label>
+                  <select class="form-select" name="tipoInmueble" required>
+                    <option value="">Seleccionar</option>
+                    <option>Casa</option>
+                    <option>Departamento</option>
+                    <option>Terreno</option>
+                    <option>Local comercial</option>
+                    <option>Oficina</option>
+                    <option>Habitación</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona el tipo de inmueble.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Ciudad *</label>
+                  <input type="text" class="form-control" name="ciudad" placeholder="Ej: Santa Cruz, La Paz, Cochabamba" required>
+                  <div class="invalid-feedback">Escribe la ciudad.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Zona o barrio de interés *</label>
+                  <input type="text" class="form-control" name="zona" placeholder="Ej: Centro, Zona Norte, Equipetrol" required>
+                  <div class="invalid-feedback">Escribe la zona o barrio.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">Presupuesto máximo *</label>
+                  <input type="number" class="form-control" name="presupuesto" min="1" placeholder="Ej: 500" required>
+                  <div class="invalid-feedback">Indica tu presupuesto.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">Moneda *</label>
+                  <select class="form-select" name="moneda" required>
+                    <option>USD</option>
+                    <option>Bs</option>
+                    <option>S/</option>
+                    <option>COP</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">¿Cuándo lo necesitas? *</label>
+                  <select class="form-select" name="tiempoBusqueda" required>
+                    <option value="">Seleccionar</option>
+                    <option>Urgente</option>
+                    <option>En 1 semana</option>
+                    <option>En 1 mes</option>
+                    <option>En 3 meses</option>
+                    <option>Solo estoy cotizando</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un tiempo aproximado.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">Dormitorios</label>
+                  <input type="number" class="form-control" name="dormitorios" min="0" placeholder="Ej: 2">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">Baños</label>
+                  <input type="number" class="form-control" name="banos" min="0" placeholder="Ej: 1">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label fw-semibold">Forma de pago</label>
+                  <select class="form-select" name="formaPago">
+                    <option value="">Seleccionar</option>
+                    <option>Contado</option>
+                    <option>Crédito bancario</option>
+                    <option>Alquiler mensual</option>
+                    <option>Anticrético</option>
+                    <option>Aún no sé</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Características importantes</label>
+                  <div class="row g-2">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Garaje" id="garaje">
+                        <label class="form-check-label" for="garaje">Garaje</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Patio" id="patio">
+                        <label class="form-check-label" for="patio">Patio</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Amoblado" id="amoblado">
+                        <label class="form-check-label" for="amoblado">Amoblado</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Acepta mascotas" id="mascotas">
+                        <label class="form-check-label" for="mascotas">Acepta mascotas</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Cerca de avenida principal" id="avenida">
+                        <label class="form-check-label" for="avenida">Cerca de avenida</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-check option-box">
+                        <input class="form-check-input" type="checkbox" name="caracteristicas" value="Documentos al día" id="documentos">
+                        <label class="form-check-label" for="documentos">Documentos al día</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Comentario adicional</label>
+                  <textarea class="form-control" name="comentario" rows="4" placeholder="Ej: Busco departamento de 2 dormitorios, zona tranquila, máximo 400 USD."></textarea>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nombre completo *</label>
+                  <input type="text" class="form-control" name="nombre" required>
+                  <div class="invalid-feedback">Escribe tu nombre.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">WhatsApp *</label>
+                  <input type="tel" class="form-control" name="whatsapp" placeholder="Ej: +591 70000000" required>
+                  <div class="invalid-feedback">Escribe tu WhatsApp.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Correo electrónico</label>
+                  <input type="email" class="form-control" name="email" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="col-12">
+                  <div class="alert alert-info mb-0">
+                    Al enviar tu solicitud, se abrirá WhatsApp con tus datos listos para enviar.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100 fw-bold">
+                    Enviar mi solicitud
+                  </button>
+                </div>
+
+                <div class="col-12">
+                  <div id="mensajeExitoComprador" class="alert alert-success d-none">
+                    Solicitud preparada correctamente. Revisa WhatsApp para enviarla.
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 text-center text-muted">
+    <div class="container">
+      © 2026 Solicitudes Inmobiliarias
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
