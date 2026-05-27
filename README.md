@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Solicitudes Inmobiliarias - MVP con Bootstrap
 
 Este proyecto contiene formularios separados para validar una idea de plataforma inmobiliaria basada en solicitudes de clientes.
@@ -41,3 +42,7 @@ Ejemplos:
 
 Este MVP todavía no guarda datos en una base de datos real. Solo guarda una copia temporal en el navegador usando `localStorage`.
 Para producción, lo ideal sería conectar los formularios a Google Sheets, Airtable, Firebase, Supabase o una base de datos propia.
+=======
+# formulario
+formularioInmobiliario
+>>>>>>> 3432074c3c3994061ac663a96592f32ae7859cf3
